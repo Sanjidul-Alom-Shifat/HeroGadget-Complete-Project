@@ -12,7 +12,9 @@ export const CartContext = createContext([])
 // start
 
 const App = () => {
+
   let [isOpen, setIsOpen] = useState(false)
+
   const { products, initialCart } = useLoaderData()
 
   const cartAlert = sessionStorage.getItem('alert')
@@ -21,7 +23,11 @@ const App = () => {
     setIsOpen(true)
     sessionStorage.setItem('alert', true)
   }
+
   const [cart, setCart] = useState(initialCart)
+
+  // main body of project
+
   return (
     <ProductContext.Provider value={products}>
       <CartContext.Provider value={[cart, setCart]}>
