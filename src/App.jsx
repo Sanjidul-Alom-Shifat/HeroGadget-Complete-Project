@@ -6,7 +6,11 @@ import { toast } from 'react-hot-toast'
 import Modal from './components/Modal'
 
 export const ProductContext = createContext([])
+
 export const CartContext = createContext([])
+
+// start
+
 const App = () => {
   let [isOpen, setIsOpen] = useState(false)
   const { products, initialCart } = useLoaderData()
